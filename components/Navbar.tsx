@@ -8,35 +8,28 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import {
-  HomeIcon,
-  AboutIcon,
-  ProjectsIcon,
-  ContactIcon,
-  MenuIcon,
-  CloseIcon,
-} from './icons';
+import { Home, User, Code2, Mail, Menu, X } from 'lucide-react';
 
 const menuItems = [
   { 
     href: '/', 
     label: 'Home',
-    Icon: HomeIcon,
+    Icon: Home,
   },
   { 
     href: '/about', 
     label: 'About',
-    Icon: AboutIcon,
+    Icon: User,
   },
   { 
     href: '/projects', 
     label: 'Projects',
-    Icon: ProjectsIcon,
+    Icon: Code2,
   },
   { 
     href: '/contact', 
     label: 'Contact',
-    Icon: ContactIcon,
+    Icon: Mail,
   },
 ] as const;
 
@@ -83,9 +76,9 @@ export function Navbar() {
                 aria-label="Toggle menu"
               >
                 {isOpen ? (
-                  <CloseIcon className="w-6 h-6" />
+                  <X className="w-6 h-6" />
                 ) : (
-                  <MenuIcon className="w-6 h-6" />
+                  <Menu className="w-6 h-6" />
                 )}
               </button>
             </DrawerTrigger>
@@ -111,23 +104,22 @@ export function Navbar() {
         </div>
 
         {/* Desktop menu */}
-        <ul className="hidden sm:flex items-center gap-2 text-sm font-medium">
+        <ul className="hidden sm:flex items-center gap-2 text-lg font-mono">
           {menuItems.map(({ href, label, Icon }) => (
             <li key={href}>
               <Link 
                 href={href} 
-                className="rounded-full p-4 hover:bg-foreground/5 flex items-center gap-2"
+                className="rounded-full px-8 py-6 hover:bg-foreground/5 flex items-center gap-3"
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="w-6 h-6" />
                 {label}
               </Link>
             </li>
           ))}
         </ul>
 
-        {/* Theme switch */}
         <div className="flex items-center">
-          <div className="w-px h-6 bg-border/50 mx-2 hidden sm:block" />
+          <div className="w-px h-8 bg-border/50 mx-4 hidden sm:block" />
           <ThemeSwitch />
         </div>
       </div>

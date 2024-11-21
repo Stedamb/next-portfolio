@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "bradlc.vscode-tailwindcss",
-        "yutengjing.vscode-colorize-plus"
+        "bradlc.vscode-tailwindcss"
     ]
 }

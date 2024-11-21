@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-    <g>
-        <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#000000"></path>
-        <path d="M85.334,85.333 L170.667,85.333 L170.667,170.667 L85.334,170.667 L85.334,85.333 Z M85.334,170.667 L170.667,170.667 L170.667,256 L85.334,256 L85.334,170.667 Z M85.334,0 L170.667,0 L170.667,85.333 L85.334,85.333 L85.334,0 Z" fill="#FFFFFF"></path>
-    </g>
+<svg fill="none" stroke-linecap="square" stroke-miterlimit="10" version="1.1" viewBox="0 0 226.77 226.77" xmlns="http://www.w3.org/2000/svg"><link xmlns="" type="text/css" id="dark-mode" rel="stylesheet" href=""/><style xmlns="" type="text/css" id="dark-mode-custom-style"/>
+ <g transform="translate(8.964 4.2527)" fill-rule="evenodd" stroke="currentColor" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4">
+  <path d="m63.02 200.61-43.213-174.94 173.23 49.874z"/>
+  <path d="m106.39 50.612 21.591 87.496-86.567-24.945z"/>
+  <path d="m84.91 125.03-10.724-43.465 43.008 12.346z"/>
+  <path d="m63.458 38.153 10.724 43.465-43.008-12.346z"/>
+  <path d="m149.47 62.93 10.724 43.465-43.008-12.346z"/>
+  <path d="m84.915 125.06 10.724 43.465-43.008-12.346z"/>
+ </g>
 </svg>

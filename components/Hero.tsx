@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { Suspense } from 'react';
 
-const Icosahedron3D = dynamic(() => import('../components/Icosahedron3D'), {
+const Icosahedron = dynamic(() => import('./3d/Icosahedron'), {
   ssr: false,
   loading: () => (
     <div className="animate-pulse w-full h-full bg-muted rounded-xl" />
   ),
 });
 
-const TorusKnot3D = dynamic(() => import('./TorusKnot3D'), {
+const Thorus = dynamic(() => import('./3d/Thorus'), {
   ssr: false,
   loading: () => (
     <div className="animate-pulse w-full h-full bg-muted rounded-xl" />
@@ -60,12 +60,12 @@ const technologies = [
     color: 'bg-gradient-to-br from-[#663399]/20 to-[#663399]/5 border border-[#663399]/20 hover:from-[#663399]/30 hover:to-[#663399]/10',
     textColor: 'text-foreground',
     size: 'row-span-4 col-span-2',
-    component: TorusKnot3D,
+    component: Thorus,
   },
   {
     name: 'Motion',
     description: 'Permormant and lightweight animation library for React',
-    icon: '/icons/sanity.svg',
+    icon: '/icons/motion.svg',
     color: 'bg-gradient-to-br from-[#ffd700]/20 to-[#ffd700]/5 border border-[#ffd700]/20 hover:from-[#ffd700]/30 hover:to-[#ffd700]/10',
     textColor: 'text-[#FF5733]',
     size: 'row-span-2 col-span-2',
@@ -93,7 +93,7 @@ export function Hero() {
           </div>
           <div className="absolute top-0 right-0 w-1/2 h-full z-0 hidden md:block">
             <Suspense fallback={<div className="w-full h-full bg-muted/20 rounded-lg animate-pulse" />}>
-              <Icosahedron3D />
+              <Icosahedron />
             </Suspense>
           </div>
         </motion.div>
@@ -114,6 +114,7 @@ export function Hero() {
             )}
             <div className="relative z-10 flex flex-col h-full">
               <div>
+                  <Image src={tech.icon} alt={tech.name} width={24} height={24} className="mr-2 fill-foreground stroke-foreground" />
                 <h2 className={`text-lg font-semibold ${tech.textColor}`}>{tech.name}</h2>
                 <p className="text-md font-mono text-muted-foreground mt-2">
                   {tech.description}
